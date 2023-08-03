@@ -1,0 +1,25 @@
+CREATE TABLE fitness_pal (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    workout_type TEXT,
+    minutes INTEGER
+    );
+INSERT INTO fitness_pal (name, workout_type, minutes) VALUES ("Katrina", "running", 50);
+INSERT INTO fitness_pal (name, workout_type, minutes) VALUES ("Mel", "jumping", 15);
+INSERT INTO fitness_pal (name, workout_type, minutes) VALUES ("Don", "running", 30);
+INSERT INTO fitness_pal (name, workout_type, minutes) VALUES ("Deb", "swimming", 60);
+INSERT INTO fitness_pal (name, workout_type, minutes) VALUES ("Molly", "walking", 90);
+INSERT INTO fitness_pal (name, workout_type, minutes) VALUES ("Austin", "weight lifting", 75);
+INSERT INTO fitness_pal (name, workout_type, minutes) VALUES ("Dan", "rock climbing", 120);
+INSERT INTO fitness_pal (name, workout_type, minutes) VALUES ("Jack", "weight lifting", 45);
+
+SELECT * FROM fitness_pal;
+
+UPDATE fitness_pal SET name = "Adam" WHERE name = "Don";
+SELECT * FROM fitness_pal;
+UPDATE fitness_pal SET minutes = 20 WHERE name = "Mel";
+SELECT * FROM fitness_pal;
+DELETE FROM fitness_pal WHERE name = "Mel";
+SELECT * FROM fitness_pal;
+
+
