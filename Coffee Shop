@@ -1,0 +1,41 @@
+CREATE TABLE coffee_shop (id INTEGER, item TEXT, diet TEXT, price INTEGER, category INTEGER); 
+
+INSERT INTO coffee_shop VALUES (1, "lavender latte", "no diet", 4, "drink");
+
+INSERT INTO coffee_shop VALUES (1, "mint chocolate latte", "no diet", 4, "drink");
+
+INSERT INTO coffee_shop VALUES (1, "black coffee", "paleo", 2, "drink");
+
+INSERT INTO coffee_shop VALUES (1, "orange chocolate latte", "no diet", 4, "drink");
+
+INSERT INTO coffee_shop VALUES (1, "sourdough chocolate chip cookies", "no diet", 5, "food");
+
+INSERT INTO coffee_shop VALUES (1, "lemon loaf", "paleo", 3, "food");
+
+INSERT INTO coffee_shop VALUES (1, "poptart", "gluten free", 5, "food");
+
+INSERT INTO coffee_shop VALUES (1, "coffee flight", "no diet", 6, "drink");
+
+INSERT INTO coffee_shop VALUES (1, "peppermint mocha", "no diet", 4, "drink");
+
+INSERT INTO coffee_shop VALUES (1, "blueberry scone", "paleo", 4, "food");
+
+INSERT INTO coffee_shop VALUES (1, "breakfast bagel", "no diet", 7, "food");
+
+INSERT INTO coffee_shop VALUES (1, "lemon lavender scone", "paleo", 4, "food");
+
+INSERT INTO coffee_shop VALUES (1, "americano", "paleo", 4, "drink");
+
+INSERT INTO coffee_shop VALUES (1, "pothos", "no diet", 5, "plant");
+
+INSERT INTO coffee_shop VALUES (1, "latte", "paleo", 3, "drink");
+
+SELECT item, price FROM coffee_shop ORDER BY price ASC; 
+
+SELECT ROUND(AVG(price), 2) FROM coffee_shop;
+
+
+
+
+
+
