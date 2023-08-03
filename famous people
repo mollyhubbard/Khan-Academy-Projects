@@ -1,0 +1,46 @@
+CREATE TABLE movie_stars (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT, 
+    location TEXT, 
+    age INTEGER);
+
+INSERT INTO movie_stars (name, location, age) VALUES ("Ryan Reynolds", "US", 39);
+INSERT INTO movie_stars (name, location, age) VALUES ("Blake Lively", "US", 37);
+INSERT INTO movie_stars (name, location, age) VALUES ("Meg Ryan", "Canada", 61);
+INSERT INTO movie_stars (name, location, age) VALUES ("Billy Crystal", "Germany", 62);
+INSERT INTO movie_stars (name, location, age) VALUES ("Tom Holland", "England", 26);
+INSERT INTO movie_stars (name, location, age) VALUES ("Margot Robbie", "Australia", 35);
+INSERT INTO movie_stars (name, location, age) VALUES ("Keanu Reeves", "US", 47);
+INSERT INTO movie_stars (name, location, age) VALUES ("Christian Bale", "US", 48);
+
+CREATE TABLE wealth (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    wealth_id INTEGER, 
+    worth INTEGER, 
+    spouse TEXT, 
+    source TEXT);
+
+INSERT INTO wealth (wealth_id, worth, spouse, source) VALUES (1, 500, "Blake Lively", "marketingcompany");
+INSERT INTO wealth (wealth_id, worth, spouse, source) VALUES (2, 400, "Ryan Reynolds", "charities");
+INSERT INTO wealth (wealth_id, worth, spouse, source) VALUES (3, 300, "Bob Marley", "actress");
+INSERT INTO wealth (wealth_id, worth, spouse, source) VALUES (4, 250, "Mary Loo", "animated voice overs");
+INSERT INTO wealth (wealth_id, worth, spouse, source) VALUES (5, 700, "Zendaya", "action movies");
+INSERT INTO wealth (wealth_id, worth, spouse, source) VALUES (6, 800, "Billy Thorton", "Barbie movie");
+INSERT INTO wealth (wealth_id, worth, spouse, source) VALUES (7, 300, "Sue Ellen", "The Matrix");
+INSERT INTO wealth (wealth_id, worth, spouse, source) VALUES (8, 500, "Michelle Obama", "batman");
+
+
+SELECT movie_stars.name, wealth.spouse 
+FROM movie_stars
+    JOIN wealth
+    ON movie_stars.id = wealth.wealth_id;
+    
+SELECT movie_stars.name, wealth.worth
+FROM movie_stars
+    JOIN wealth
+    ON movie_stars.id = wealth.wealth_id;
+    
+    
+
+
+
